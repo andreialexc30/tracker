@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* Responsive web */
+@media screen and (min-width: 700px) {
+    .header {
+        background-size: contain;
+    }
+
+    .header-data {
+        text-align: initial !important;
+    }
+
+    .header-data_list {
+        flex-direction: initial !important;
+        padding: 1.75em 1.15em 0 1.15em !important;
+        min-height: 165px !important;
+    }
+
+    .header-data_list__item {
+        width: 100%;
+        height: 100%;
+        min-height: 80px;
+        align-self: start;
+    }
+
+    .header-data_list__item:not(:first-child) {
+        margin-left: 2.5em;
+    }
+
+    .header-data_list__item:not(:last-child) {
+        border-right: 2px solid hsl(0, 0%, 82%);
+    }
+
+    .list-item_text {
+        width: 10ch;
+        font-size: 1.5rem !important;
+    }
+}
+
+/* Active states */
+.header-form_submit:hover,
+.header-form_submit:focus,
+.header-form_submit:focus-visible {
+    background-color: hsl(0, 0%, 17%);
+    transition: all 150ms ease-in-out;
+}
+
+.header-form_input:focus,
+.header-form_input:focus-visible {
+    outline: none;
+}
+
+/* Body */
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+/* Header, search input */
+.header {
+    width: 100vw;
+    background-image: url(./images/pattern-bg.png);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-title {
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    font-size: 1.65rem;
+    padding: 1em;
+}
+
+.header-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-form_input {
+    width: 80vw;
+    max-width: 500px;
+    padding: 1.25em;
+    border: none;
+    border-top-left-radius: .85em;
+    border-bottom-left-radius: .85em;
+}
+
+.header-form_submit {
+    padding: 1.25em;
+    border: none;
+    border-top-right-radius: .85em;
+    border-bottom-right-radius: .85em;
+    cursor: pointer;
+    background-color: #000;
+}
+
+/* Data */
+.header-data {
+    width: 92vw;
+    max-width: 1200px;
+    align-self: center;
+    text-align: center;
+}
+
+.header-data_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.15em 0;
+    margin: 2em 0;
+    background-color: #fff;
+    border-radius: 1em;
+    list-style: none;
+    min-height: 260px;
+    box-shadow: 1.25px 1.25px 8px hsl(0, 0%, 40%);
+}
+
+.list-item_title {
+    text-transform: uppercase;
+    font-size: .75rem;
+    color: hsl(0, 0%, 59%);
+    letter-spacing: 1px;
+}
+
+.list-item_text {
+    margin: 0;
+    font-weight: 500;
+    padding-top: .25em;
+    font-size: 1.35rem;
+    letter-spacing: .35px;
+}
+
+/* Map */
+#map {
+    height: 100vh;
+    /* background-color: #000; */
+}

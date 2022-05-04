@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+    <title>Frontend Mentor | IP Address Tracker</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header-title">IP Address tracker</h1>
+      <form class="header-form">
+        <input class="header-form_input" type="text" placeholder="Search for any IP address or domain" autocomplete="off" />
+        <button class="header-form_submit" type="submit">
+          <img class="header-form_submit--svg" src="./images/icon-arrow.svg" alt="" />
+        </button>
+      </form>
+      <article class="header-data">
+        <ul class="header-data_list">
+          <li class="header-data_list__item">
+            <span class="list-item_title">ip address</span>
+            <p class="list-item_text">192.212.174.101</p>
+          </li>
+          <li class="header-data_list__item">
+            <span class="list-item_title">location</span>
+            <p class="list-item_text">Brooklyn, NY 10001</p>
+          </li>
+          <li class="header-data_list__item">
+            <span class="list-item_title">timezone</span>
+            <p class="list-item_text">UTC-05:00</p>
+          </li>
+          <li class="header-data_list__item">
+            <span class="list-item_title">isp</span>
+            <p class="list-item_text">SpaceX Starlink</p>
+          </li>
+        </ul>
+      </article>
+    </header>
+    <div id="map"></div>
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script src="./main.js"></script>
+  </body>
+</html>
