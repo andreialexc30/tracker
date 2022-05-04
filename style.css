@@ -7,6 +7,7 @@
 @media screen and (min-width: 700px) {
     .header {
         background-size: contain;
+        /* margin-bottom: -6em !important; */
     }
 
     .header-data {
@@ -69,6 +70,7 @@ html {
 
 body {
     font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
 }
 
 /* Header, search input */
@@ -78,6 +80,7 @@ body {
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
+    /* margin-bottom: -10em; */
 }
 
 .header-title {
@@ -153,5 +156,5 @@ body {
 /* Map */
 #map {
     height: 100vh;
-    /* background-color: #000; */
+    width: 100vw;
 }
