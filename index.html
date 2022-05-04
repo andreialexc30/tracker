@@ -14,8 +14,8 @@
     <header class="header">
       <h1 class="header-title">IP Address tracker</h1>
       <form class="header-form">
-        <input class="header-form_input" type="text" placeholder="Search for any IP address or domain" autocomplete="off" />
-        <button class="header-form_submit" type="submit">
+        <input id="userInput" class="header-form_input" type="text" placeholder="Search for any IP address or domain" autocomplete="off" />
+        <button id="search" class="header-form_submit" type="submit">
           <img class="header-form_submit--svg" src="./images/icon-arrow.svg" alt="" />
         </button>
       </form>
@@ -23,19 +23,19 @@
         <ul class="header-data_list">
           <li class="header-data_list__item">
             <span class="list-item_title">ip address</span>
-            <p class="list-item_text">192.212.174.101</p>
+            <p id="ip" class="list-item_text">192.212.174.101</p>
           </li>
           <li class="header-data_list__item">
             <span class="list-item_title">location</span>
-            <p class="list-item_text">Brooklyn, NY 10001</p>
+            <p id="loc" class="list-item_text">Brooklyn, NY 10001</p>
           </li>
           <li class="header-data_list__item">
             <span class="list-item_title">timezone</span>
-            <p class="list-item_text">UTC-05:00</p>
+            <p id="tz" class="list-item_text">UTC-05:00</p>
           </li>
           <li class="header-data_list__item">
             <span class="list-item_title">isp</span>
-            <p class="list-item_text">SpaceX Starlink</p>
+            <p id="isp" class="list-item_text">SpaceX Starlink</p>
           </li>
         </ul>
       </article>
