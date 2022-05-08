@@ -153,6 +153,14 @@ body {
     letter-spacing: .35px;
 }
 
+.warning {
+    text-align: center;
+    text-transform: uppercase;
+    color: hsl(0, 83%, 53%);
+    letter-spacing: .25px;
+    font-weight: 500;
+}
+
 /* Map */
 #map {
     height: 100vh;
