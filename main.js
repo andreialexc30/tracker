@@ -9,7 +9,6 @@ const displayISP = document.getElementById('isp')
 // Display own user IP on page load (not working due to CORS and proxy)
 window.addEventListener('DOMContentLoaded', () => {
     const displayed = `https://cors-anywhere.herokuapp.com/https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress`;
-
     returnData(displayed);
 })
 
@@ -20,7 +19,9 @@ searchBtn.addEventListener('click', (e) => {
     let searchQuery = input.value.trim().toLowerCase();
     let endpoint = `https://cors-anywhere.herokuapp.com/https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${searchQuery}&domain=${searchQuery}`;
 
-    returnData(endpoint)
+    if(searchQuery === null || searchQuery === undefined || searchQuery === '') {
+        console.log('Needs valid input');
+    } else returnData(endpoint)
 })
 
 // Fetching data
@@ -51,7 +52,7 @@ function switchView(lat, lng) {
         zoom: 15,
     });
 
-    // Check if map is init -- not working as intended, fix in progress
+    // Check if map is init
     const container = L.DomUtil.get('map');
     if(container !== null) {
         container._leaflet_id = null;
@@ -63,13 +64,12 @@ function switchView(lat, lng) {
     // Create marker icon
     const pinIcon = L.icon({
         iconUrl: './images/icon-location.svg',
-        iconSize: [35, 50],
-        iconAnchor: [22, 94]
+        iconSize: [35, 35],
+        iconAnchor: [lat, lng]
     })
 
     // Add marker to map
     const marker = L.marker([lat, lng], {icon: pinIcon}).addTo(map)
-
 
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
