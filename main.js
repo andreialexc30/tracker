@@ -20,7 +20,13 @@ searchBtn.addEventListener('click', (e) => {
     let endpoint = `https://cors-anywhere.herokuapp.com/https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${searchQuery}&domain=${searchQuery}`;
 
     if(searchQuery === null || searchQuery === undefined || searchQuery === '') {
-        console.log('Needs valid input');
+        const form = document.getElementById('form');
+        const pElement = document.createElement('p');
+        const textWarning = document.createTextNode('Invalid input');
+        pElement.classList.add('warning')
+        pElement.appendChild(textWarning);
+
+        form.parentNode.insertBefore(pElement, form.nextSibling);
     } else returnData(endpoint)
 })
 
