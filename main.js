@@ -8,7 +8,7 @@ const displayISP = document.getElementById('isp')
 
 // Display own user IP on page load (not working due to CORS and proxy)
 window.addEventListener('DOMContentLoaded', () => {
-    const displayed = `https://cors-anywhere.herokuapp.com/https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress`;
+    const displayed = `https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress`;
     returnData(displayed);
 })
 
@@ -17,7 +17,7 @@ searchBtn.addEventListener('click', (e) => {
     e.preventDefault();
     const input = document.getElementById('userInput');
     let searchQuery = input.value.trim().toLowerCase();
-    let endpoint = `https://cors-anywhere.herokuapp.com/https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${searchQuery}&domain=${searchQuery}`;
+    let endpoint = `https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${searchQuery}&domain=${searchQuery}`;
 
     if(searchQuery === null || searchQuery === undefined || searchQuery === '') {
         const form = document.getElementById('form');
