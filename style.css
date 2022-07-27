@@ -77,10 +77,9 @@ body {
 .header {
     width: 100vw;
     background-image: url(./images/pattern-bg.png);
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     display: flex;
     flex-direction: column;
-    /* margin-bottom: -10em; */
 }
 
 .header-title {
